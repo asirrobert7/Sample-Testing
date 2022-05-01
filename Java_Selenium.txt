@@ -1,0 +1,322 @@
+
+Selenium Web driver:
+--> it is componenet of selenium
+--> user will directly communicate with web browser.
+--> it supports different web driver code
+
+Selenium web driver commands:
+
+selenium Browser commands:
+1.Get: it is used to open any web page or link
+syntax:
+get("url "): driver.get(" ");
+
+2.Get Title: it is used to get the title of the page.
+ex: getTitle()
+
+3.Get Current url: if you want to display the url address
+getCurrentUrl()
+
+4.Get page source command
+
+5.close: it is used to close the current oen browser
+ex: close();
+
+6.Quit: it is used to close all the opened browser.
+ex: quit()
+
+Selenium Web Element Command:
+1.Clear(): it is used to clear the perticular feild
+
+2.SendKeys():
+--> it is used to pass the user defined inputs.
+--> it is used for textbox.
+
+3.Click():
+--> it is used to click some object or link.
+--> even it is also used for form submittion
+
+4.isDisplayed():
+--> it is used to check whether the perticular element is displayed or not.
+
+5.isEnabled():
+--> it is ued to to check the element or object is enabled or not.
+
+6.isSelected():
+--> it is used to confirm the object is selected or not
+
+7.Submit():
+--> it is used to submit the form
+
+8.getText();
+--> it is used to get or capture the message from the perticular object
+
+Steps to write the web driver code:
+1.Find the element
+2.type of locator
+3.Method or action
+
+selenium Web driver commands:
+1.Navigate():
+--> it is used to navigate some specific link or web site
+syntax:
+driver.navigate().to(" ");
+
+2.Forward():
+--> it is used to forward the web page
+syntax;
+driver.navigate().forward();
+
+3.Back():
+--> it is used to move or navigate to prevoius page
+syntax:
+driver.navigate().back();
+
+4.Refresh():
+--> it is used to refresh the current page.
+syntax:
+driver.navigate().refresh();
+
+How to access drop down:
+--> we need to import the select class
+--> need to locate an drop down and store as element using select class
+--> we can assess by using index value or actual string value
+
+Web driver Alert Handling:
+--> alert means while executing if any run time exception occurs how selenium
+is going to handle that situation.
+
+Alert handling methods:
+1.dismiss():
+--> it is used to close the alert window or cancel the alert window
+syntax:
+driver.switchTo().alert().dismiss();
+
+2.accept():
+--> it is used to accept the ok or click the ok button on the alert window
+syntax:
+driver.switchTo().alert().accept();
+
+3.getText():
+--> it is used to capture or get the message of the alert window.
+syntax:
+driver.switchTo().alert().getText();
+
+4.sendKeys()
+--> it is used to pass some inputs to the text box or alert window.
+syntax:
+driver.switchTo().alert().sendkeys("Text");
+
+XPath:
+--> it is a type of locator used to locate an element.
+--> it is an html structure to locate an element.
+
+why xpath:
+--> when we are unable to locate an element using other locators.
+--> when there is a dynamic element or dynamic value for the element.
+
+
+Round trip:
+name="tripType"
+
+One Way:
+name="tripType"
+
+xpath syntax:
+xpath = //tagname[@Attribute='value']
+
+// : it indicates current node
+tagname : name of the perticular node
+@ : select attribute
+attribute: name of the reference locator
+value: value for the selected attribute or locator.
+
+
+
+Types of Xpath:
+
+1.absolute xpath:
+--> it is a direct way to find the element
+--> long xpath compare to relative xpath
+--> it starts with single forward slash[/]
+--> it is not recommended
+
+2.Relative xpath:
+--> it is used to identify the middle of the HTML structure
+--> it is used to identify the element using reference variable.
+--> it is short xpath compare to absolute xpath
+--> it starts with double forward slash[//]
+
+How to create XPath:
+
+1.Basic xPath:
+--> here we can create xpath by taking some locator as a reference.
+ex:
+xpath=//input[@name='userName']
+
+2.Contains():
+--> we will locate or identify the element using some partial string or some constent 
+string.
+ex:
+xpath=//*[contains(@name,'pass')]
+
+3.using OR & AND:
+--> we can locate an element using morethen one conditions.
+
+ex1:
+xpath=//*[@type='submit' or @name='submit']
+
+ex2:
+xpath=//input[@type='submit' and @name='submit']
+
+Test Automation frame woek:
+
+what is framework:
+--> it is a set of pre-defined code
+--> it is a set of pre-defined parameter
+
+why framework:
+--> proper procedure to implement the test case
+--> re-use the automated test script
+
+types of framework:
+1.JUnit:
+--> it is a unit testing frame-work.
+--> it is used to perform unit level testing when the software is developed in java.
+--> it is also used to perform functional testing using selenium.
+
+JUnit Annotations:
+--> it is used to implement the code systematically.
+--> it is used what need to be implemented & where.
+
+Types of Annotations:
+
+1.@Test: This statement contain the actual test case.
+
+2.@BeforeAllClass: This statement will be executed initially one time
+--> it will be executed before all the test methods
+
+3.@AfterAllClass: This statement will be executed finally after all test 
+method got executed.
+--> it will be executed only once finally.
+
+4.@BeforeClass: This statement will be executed before each test methods.
+
+5.@afterClass: This statement will be executed after each test methods.
+
+Selenium Assert:
+--> it is used to compare the expected and actual.
+--> it is used to to verify the respose from server or application
+--> using assertion we can verify the feature of of any object
+
+Types of Assertions:
+1.AssertEquals:
+--> This method is use to compare the expected and actual. if both are same Assert will pass
+or assert will fail.
+syntax:
+Assert.assertEquals(actual,expected);
+
+2.AssertNotEquals:
+--> this method is used to compare the expected and actual. if both are not same then Assert is pass 
+else assert will be fail.
+syntax:
+Assert.assertNotEquals(actual,expected,message);
+
+3.AssertTrue:
+--> it return the output in boolean.
+--> it will check the given condition if condition is true then
+Assert will be pass else Fail.
+syntax:
+Assert.assertTrue(condition);
+
+4.AssertFalse:
+--> it return the output in boolean
+--> it will check the the given condition if condition is not true then assert is True 
+else Assert is Fail.
+syntax:
+Assert.AssertFalse(condition);
+
+
+Selenium Wait Statement:
+--> wait statement is used to throw the exception after the given time limit
+--> to run the application according to normal behaviour we can use wait statement
+--> when we add wait selenium won't send no such element exception immediatlly
+
+types of wait statement:
+1.implicit wait statement:
+--> it is applied in the browser or page level
+--> wait is applied on all the statement in code
+--> No such element Exception after the given time
+--> But it won't wait till the specified time everytime
+
+2.explicit wait statement:
+--> wait for the object level
+--> add the wait in specific statement or specific action to be completed
+--> No such element Exception after the given time
+--> But it won't wait till the specified time everytime
+
+3.Thread.sleep:
+--> it is applied on all the statement
+--> it will wait forcefully
+
+4.PageLoadTimeOut:
+--> wait is applied for the page level or browser level
+--> it is applied for content loading timeout
+
+TestNG Framework:
+--> framework is used to complete the testing systematically.
+--> framework contains pre-defined code or annotations
+--> it stands for Test Next Generation
+
+Advantage of TestNG:
+--> it is use to implement Data Driven Testing
+--> it is used for Parallell Testing
+--> it is used to execute more than one test methods inside the class
+--> it is used to execute the test case based on the priority
+--> it is used for Test Suite.
+--> it is also used for generating reports & result.
+
+Test Suite:It means collection of test case.
+
+TestNG Annotations:
+
+1.@Test: It is used to add the actual test case
+
+2.@BeforeClass: it is initialization / will be executed only once in the initial level
+
+3.@BeforeMethod: This will be executed before each Test methods
+
+4.@BeforeTest: This will be executed before each Test
+
+5.@AfterClass: This will be executed finally /one time execution
+
+6.@AfterMethod: This will be executed after each test methods
+
+7.@AfterTest: This will be executed after each Test
+
+8.@DataProvider: This will be used for data driven-testing
+
+9.@Parameter: This will be used for data driven testing from xml file.
+
+Data driven Testing:
+--> it is used to validate an object with different set of inputs.
+--> we can validate an object by dynamic data sets
+--> using @Dataprovider
+
+TestNG Framework Advantages:
+1.we can create multiple test methods in a single class
+2.we can implement Data Driven testing using @DataProvider
+3.We can Run the test methods based on the priority
+4. we can implement data driven testing using @Parameter [by getting inputs from xml]
+
+
+
+
+
+
+
+
+
+
+
+
